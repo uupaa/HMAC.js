@@ -1,0 +1,4 @@
+HMAC.js
+=======
+
+HMAC implement
