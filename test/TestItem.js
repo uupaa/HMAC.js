@@ -8,6 +8,9 @@ var test = new UnitTest([
         testHMACSHA1String,
         testHMACSHA1StringWithKey,
         testHMACSHA1Binary,
+
+        testHMAC_MD5,
+        testHMAC_SHA1,
     ]);
 
 // --- interface -------------------------------------------
@@ -113,6 +116,37 @@ function testHMACSHA1Binary(next) {
         next && next.miss();
     }
 }
+
+function testHMAC_MD5(next) {
+
+    // this magic value from http://en.wikipedia.org/wiki/HMAC
+    var answer = "74e6f7298a9c2d168935f58c001bad88";
+    var hash = HMAC.MD5("", "");
+
+    if (answer === hash) {
+        console.log("testHMAC_MD5 ok");
+        next && next.pass();
+    } else {
+        console.log("testHMAC_MD5 ng");
+        next && next.miss();
+    }
+}
+
+function testHMAC_SHA1(next) {
+
+    // this magic value from http://en.wikipedia.org/wiki/HMAC
+    var answer = "fbdb1d1b18aa6c08324b7d64b71fb76370690e1d";
+    var hash = HMAC.SHA1("", "");
+
+    if (answer === hash) {
+        console.log("testHMAC_SHA1 ok");
+        next && next.pass();
+    } else {
+        console.log("testHMAC_SHA1 ng");
+        next && next.miss();
+    }
+}
+
 
 // --- export ----------------------------------------------
 
