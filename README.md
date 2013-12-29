@@ -1,7 +1,7 @@
 HMAC.js
 =========
 
-HMAC.js は、HMAC SHA1 と HMAC MD5 ハッシュを計算する機能を提供します。
+HMAC.js is calc HMAC SHA1 and HMAC MD5.
 
 # Install, Setup modules
 
