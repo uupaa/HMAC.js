@@ -1,6 +1,6 @@
 {
   "name":           "uupaa.hmac.js",
-  "version":        "0.8.3",
+  "version":        "0.8.4",
   "description":    "HMAC implement.",
   "url":            "https://github.com/uupaa/HMAC.js",
   "keywords":       ["HMAC", "SHA1", "MD5", "Hash", "util", "uupaa"],
@@ -13,6 +13,7 @@
     "uupaa.task.js": ">= 0.8.0",
     "uupaa.sha1.js": ">= 0.8.0",
     "uupaa.md5.js": ">= 0.8.0",
+    "uupaa.bytearray.js": ">= 0.8.0",
     "uupaa.wordarray.js": ">= 0.8.0"
   },
   "lib":            "./lib/",
