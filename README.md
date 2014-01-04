@@ -3,6 +3,11 @@ HMAC.js
 
 HMAC.js is calc HMAC SHA1 and HMAC MD5.
 
+
+# API Document
+
+https://github.com/uupaa/HMAC.js/wiki/HMAC
+
 # Install, Setup modules
 
 ```sh
@@ -28,9 +33,4 @@ $ npm test
     test success.
     ok.
 ```
-
-# API Document
-
-https://github.com/uupaa/HMAC.js/wiki/HMAC
-
 
