@@ -11,15 +11,11 @@ https://github.com/uupaa/HMAC.js/wiki/HMAC
 # Install, Setup modules
 
 ```sh
+$ brew install closure-compiler
+
 $ git clone git@github.com:uupaa/HMAC.js.git
 $ cd HMAC.js
 $ npm install
-```
-
-# Test
-
-```sh
-$ npm test
 ```
 
 # Minify
@@ -32,3 +28,8 @@ $ npm start
 $ node node_modules/uupaa.minify.js --keep --output ./lib/HMAC.min.js ./lib/HMAC.js
 ```
 
+# Test
+
+```sh
+$ npm test
+```

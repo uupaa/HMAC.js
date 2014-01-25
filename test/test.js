@@ -10,7 +10,7 @@ new Test().add([
         testHMAC_MD5,
         testHMAC_SHA1,
     ]).run().worker(function(err, test) {
-        if (!err) {
+        if (!err && typeof HMAC_ !== "undefined") {
             HMAC = HMAC_;
             new Test(test).run().worker();
         }
