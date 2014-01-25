@@ -9,7 +9,12 @@ new Test().add([
 
         testHMAC_MD5,
         testHMAC_SHA1,
-    ]).run();
+    ]).run().worker(function(err, test) {
+        if (!err) {
+            HMAC = HMAC_;
+            new Test(test).run().worker();
+        }
+    });
 
 function testHMACMD5String(next) {
 

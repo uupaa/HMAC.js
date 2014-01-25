@@ -1,5 +1,25 @@
 <!DOCTYPE html><html><head><title>test</title>
 <meta charset="utf-8"></head><body>
+
+<script id="worker" type="javascript/worker">
+onmessage = function(event) {
+    var baseDir = event.data.baseDir;
+
+    importScripts(baseDir + "../node_modules/uupaa.help.js/lib/Help.js");
+    importScripts(baseDir + "../node_modules/uupaa.test.js/lib/Test.js");
+    importScripts(baseDir + "../node_modules/uupaa.task.js/lib/Task.js");
+    importScripts(baseDir + "../node_modules/uupaa.bytearray.js/lib/ByteArray.js");
+    importScripts(baseDir + "../node_modules/uupaa.wordarray.js/lib/WordArray.js");
+    importScripts(baseDir + "../node_modules/uupaa.md5.js/lib/MD5.js");
+    importScripts(baseDir + "../node_modules/uupaa.sha1.js/lib/SHA1.js");
+    importScripts(baseDir + "../lib/HMAC.js");
+    importScripts(baseDir + "../lib/HMAC.min.js");
+    importScripts(baseDir + "./test.js");
+
+    self.postMessage({ error: self.errorMessage || "" });
+};
+</script>
+
 <script src="../node_modules/uupaa.help.js/lib/Help.js"></script>
 <script src="../node_modules/uupaa.task.js/lib/Task.js"></script>
 <script src="../node_modules/uupaa.test.js/lib/Test.js"></script>
@@ -8,6 +28,7 @@
 <script src="../node_modules/uupaa.md5.js/lib/MD5.js"></script>
 <script src="../node_modules/uupaa.sha1.js/lib/SHA1.js"></script>
 <script src="../lib/HMAC.js"></script>
+<script src="../lib/HMAC.min.js"></script>
 <script src="./test.js"></script>
 </body></html>
 
