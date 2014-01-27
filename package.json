@@ -1,6 +1,6 @@
 {
   "name":           "uupaa.hmac.js",
-  "version":        "0.8.8",
+  "version":        "0.8.9",
   "description":    "HMAC implement.",
   "url":            "https://github.com/uupaa/HMAC.js",
   "keywords":       ["HMAC", "SHA1", "MD5", "Hash", "util", "uupaa"],
@@ -12,6 +12,11 @@
     "start":        "node node_modules/uupaa.minify.js --keep --output ./lib/HMAC.min.js ./lib/HMAC.js",
     "test":         "NODE_ENV=production NODE_PATH=lib node --harmony test/index.node.js; open test/index.html"
   },
+  "dependencies": {
+    "uupaa.sha1.js":    "",
+    "uupaa.md5.js":     "",
+    "uupaa.bytearray.js": ""
+  },
   "devDependencies": {
     "uupaa.help.js":    "",
     "uupaa.test.js":    "",
@@ -19,8 +24,7 @@
     "uupaa.minify.js":  "",
     "uupaa.sha1.js":    "",
     "uupaa.md5.js":     "",
-    "uupaa.bytearray.js": "",
-    "uupaa.wordarray.js": ""
+    "uupaa.bytearray.js": ""
   },
   "lib":            "./lib/",
   "main":           "./index.js",
