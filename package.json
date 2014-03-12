@@ -1,6 +1,6 @@
 {
   "name":           "uupaa.hmac.js",
-  "version":        "0.8.11",
+  "version":        "0.8.12",
   "description":    "HMAC implement.",
   "url":            "https://github.com/uupaa/HMAC.js",
   "keywords":       ["HMAC", "SHA1", "MD5", "Hash", "util", "uupaa"],
@@ -9,8 +9,17 @@
     "url":          "https://github.com/uupaa/HMAC.js.git"
   },
   "scripts": {
-    "start":        "node node_modules/uupaa.minify.js --keep --output ./lib/HMAC.min.js ./lib/HMAC.js",
-    "test":         "NODE_ENV=production NODE_PATH=lib node --harmony test/index.node.js; open test/index.html"
+    "watch":        "node node_modules/uupaa.watch.js --verbose --action build ./lib/HMAC.js",
+    "build":        "node node_modules/uupaa.minify.js --keep --option 'formatting pretty_print' --output ./lib/HMAC.min.js ./lib/HMAC.js",
+    "build-release":"node node_modules/uupaa.minify.js --module all --output ./lib/HMAC.min.js",
+    "test":         "NODE_ENV=production NODE_PATH=lib node --harmony test/index.node.js; open test/index.html",
+    "lint":         "plato --title HMAC.js --jshint .jshintrc -d lint/plato lib/HMAC.js; open lint/plato/index.html"
+  },
+  "build": {
+    "all": { "lib/HMAC.js": "" },
+    "node": { },
+    "worker": { },
+    "browser": { }
   },
   "dependencies": {
     "uupaa.sha1.js":    "",
@@ -18,6 +27,7 @@
     "uupaa.bytearray.js": ""
   },
   "devDependencies": {
+    "uupaa.valid.js":   "",
     "uupaa.help.js":    "",
     "uupaa.test.js":    "",
     "uupaa.task.js":    "",
