@@ -1,6 +1,6 @@
 {
   "name":           "uupaa.hmac.js",
-  "version":        "0.8.12",
+  "version":        "0.8.13",
   "description":    "HMAC implement.",
   "url":            "https://github.com/uupaa/HMAC.js",
   "keywords":       ["HMAC", "SHA1", "MD5", "Hash", "util", "uupaa"],
@@ -9,17 +9,16 @@
     "url":          "https://github.com/uupaa/HMAC.js.git"
   },
   "scripts": {
-    "watch":        "node node_modules/uupaa.watch.js --verbose --action build ./lib/HMAC.js",
-    "build":        "node node_modules/uupaa.minify.js --keep --option 'formatting pretty_print' --output ./lib/HMAC.min.js ./lib/HMAC.js",
-    "build-release":"node node_modules/uupaa.minify.js --module all --output ./lib/HMAC.min.js",
+    "watch":        "node node_modules/uupaa.watch.js --verbose --action build",
+    "build":        "node node_modules/uupaa.minify.js --verbose --strict --keep --pretty",
+    "build-simple": "node node_modules/uupaa.minify.js --verbose --strict --keep --pretty --nowrap --simple",
+    "build-release":"node node_modules/uupaa.minify.js --verbose --strict --module",
     "test":         "NODE_ENV=production NODE_PATH=lib node --harmony test/index.node.js; open test/index.html",
-    "lint":         "plato --title HMAC.js --jshint .jshintrc -d lint/plato lib/HMAC.js; open lint/plato/index.html"
+    "lint":         "node node_modules/uupaa.plato.js; open lint/plato/index.html"
   },
-  "build": {
-    "all": { "lib/HMAC.js": "" },
-    "node": { },
-    "worker": { },
-    "browser": { }
+  "x-build": {
+    "inputs":       ["lib/HMAC.js"],
+    "output":       "lib/HMAC.min.js"
   },
   "dependencies": {
     "uupaa.sha1.js":    "",
@@ -29,12 +28,11 @@
   "devDependencies": {
     "uupaa.valid.js":   "",
     "uupaa.help.js":    "",
-    "uupaa.test.js":    "",
     "uupaa.task.js":    "",
-    "uupaa.minify.js":  "",
-    "uupaa.sha1.js":    "",
-    "uupaa.md5.js":     "",
-    "uupaa.bytearray.js": ""
+    "uupaa.test.js":    "",
+    "uupaa.watch.js":   "",
+    "uupaa.plato.js":   "",
+    "uupaa.minify.js":  ""
   },
   "lib":            "./lib/",
   "main":           "./index.js",

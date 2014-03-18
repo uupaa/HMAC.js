@@ -9,12 +9,16 @@ new Test().add([
 
         testHMAC_MD5,
         testHMAC_SHA1,
-    ]).run().worker(function(err, test) {
-        if (!err && typeof HMAC_ !== "undefined") {
-            var name = Test.swap(HMAC, HMAC_);
+    ]).run(function(err, test) {
+        if (1) {
+            err || test.worker(function(err, test) {
+                if (!err && typeof HMAC_ !== "undefined") {
+                    var name = Test.swap(HMAC, HMAC_);
 
-            new Test(test).run(function(err, test) {
-                Test.undo(name);
+                    new Test(test).run(function(err, test) {
+                        Test.undo(name);
+                    });
+                }
             });
         }
     });
