@@ -5,6 +5,7 @@
 onmessage = function(event) {
     var baseDir = event.data.baseDir;
 
+    importScripts(baseDir + "../node_modules/uupaa.console.js/lib/Console.js");
     importScripts(baseDir + "../node_modules/uupaa.valid.js/lib/Valid.js");
     importScripts(baseDir + "../node_modules/uupaa.help.js/lib/Help.js");
     importScripts(baseDir + "../node_modules/uupaa.task.js/lib/Task.js");
@@ -13,7 +14,7 @@ onmessage = function(event) {
     importScripts(baseDir + "../node_modules/uupaa.md5.js/lib/MD5.js");
     importScripts(baseDir + "../node_modules/uupaa.sha1.js/lib/SHA1.js");
     importScripts(baseDir + "../lib/HMAC.js");
-    importScripts(baseDir + "../lib/HMAC.min.js");
+    importScripts(baseDir + "../release/HMAC.min.js");
     importScripts(baseDir + "./test.js");
 
     self.postMessage({ error: self.errorMessage || "" });
@@ -28,7 +29,7 @@ onmessage = function(event) {
 <script src="../node_modules/uupaa.md5.js/lib/MD5.js"></script>
 <script src="../node_modules/uupaa.sha1.js/lib/SHA1.js"></script>
 <script src="../lib/HMAC.js"></script>
-<script src="../lib/HMAC.min.js"></script>
+<script src="../release/HMAC.min.js"></script>
 <script src="./test.js"></script>
 </body></html>
 
