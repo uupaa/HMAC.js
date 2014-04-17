@@ -37,4 +37,3 @@ var HMAC = require("lib/HMAC.js");
 console.log( HMAC("MD5", "", "") ); // "74e6f7298a9c2d168935f58c001bad88"
 ```
 
-
