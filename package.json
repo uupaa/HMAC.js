@@ -1,6 +1,6 @@
 {
   "name":           "uupaa.hmac.js",
-  "version":        "0.8.17",
+  "version":        "0.8.18",
   "description":    "HMAC implement.",
   "url":            "https://github.com/uupaa/HMAC.js",
   "keywords":       ["HMAC", "SHA1", "MD5", "Hash", "util", "uupaa", "WebModule"],
