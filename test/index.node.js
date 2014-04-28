@@ -1,10 +1,10 @@
-require("uupaa.valid.js");
-require("uupaa.task.js");
-require("uupaa.test.js");
-require("uupaa.bytearray.js");
-require("uupaa.md5.js");
-require("uupaa.sha1.js");
+require("../node_modules/uupaa.nodemodule.js/lib/NodeModule.js");
+require("../node_modules/uupaa.valid.js/lib/Valid.js");
+require("../node_modules/uupaa.task.js/lib/Task.js");
+require("../node_modules/uupaa.test.js/lib/Test.js");
+require("../node_modules/uupaa.bytearray.js/lib/ByteArray.js");
+require("../node_modules/uupaa.md5.js/lib/MD5.js");
+require("../node_modules/uupaa.sha1.js/lib/SHA1.js");
 require("../lib/HMAC.js");
 require("../release/HMAC.min.js");
 require("./test.js");
-
