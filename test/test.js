@@ -1,4 +1,15 @@
-new Test().add([
+var ModuleTest = (function(global) {
+
+return new Test({
+        disable:    false,
+        node:       true,
+        browser:    true,
+        worker:     true,
+        button:     true,
+        both:       true,
+        primary:    global["HMAC"],
+        secondary:  global["HMAC_"],
+    }).add([
         testHMACMD5String,
         testHMACMD5StringWithKey,
         testHMACMD5Binary,
@@ -9,19 +20,7 @@ new Test().add([
 
         testHMAC_MD5,
         testHMAC_SHA1,
-    ]).run(function(err, test) {
-        if (1) {
-            err || test.worker(function(err, test) {
-                if (!err && typeof HMAC_ !== "undefined") {
-                    var name = Test.swap(HMAC, HMAC_);
-
-                    new Test(test).run(function(err, test) {
-                        Test.undo(name);
-                    });
-                }
-            });
-        }
-    });
+    ]).run().clone();
 
 function testHMACMD5String(next) {
 
@@ -154,4 +153,6 @@ function testHMAC_SHA1(next) {
         next && next.miss();
     }
 }
+
+})((this || 0).self || global);
 
