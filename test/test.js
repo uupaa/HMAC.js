@@ -1,14 +1,12 @@
-var ModuleTest = (function(global) {
+var ModuleTestHMAC = (function(global) {
 
-return new Test({
+return new Test("HMAC", {
         disable:    false,
-        node:       true,
         browser:    true,
         worker:     true,
+        node:       true,
         button:     true,
         both:       true,
-        primary:    global["HMAC"],
-        secondary:  global["HMAC_"],
     }).add([
         testHMACMD5String,
         testHMACMD5StringWithKey,
@@ -29,10 +27,8 @@ function testHMACMD5String(next) {
     var HMAC_MD5 = HMAC("MD5", "", "");
 
     if (answer === HMAC_MD5) {
-        console.log("testHMACMD5String ok");
         next && next.pass();
     } else {
-        console.log("testHMACMD5String ng");
         next && next.miss();
     }
 }
@@ -44,10 +40,8 @@ function testHMACMD5StringWithKey(next) {
     var HMAC_MD5 = HMAC("MD5", "key", "The quick brown fox jumps over the lazy dog");
 
     if (answer === HMAC_MD5) {
-        console.log("testHMACMD5StringWithKey ok");
         next && next.pass();
     } else {
-        console.log("testHMACMD5StringWithKey ng");
         next && next.miss();
     }
 }
@@ -59,10 +53,8 @@ function testHMACSHA1String(next) {
     var HMAC_SHA1 = HMAC("SHA1", "", "");
 
     if (answer === HMAC_SHA1) {
-        console.log("testHMACSHA1String ok");
         next && next.pass();
     } else {
-        console.log("testHMACSHA1String ng");
         next && next.miss();
     }
 }
@@ -74,10 +66,8 @@ function testHMACSHA1StringWithKey(next) {
     var HMAC_SHA1 = HMAC("SHA1", "key", "The quick brown fox jumps over the lazy dog");
 
     if (answer === HMAC_SHA1) {
-        console.log("testHMACSHA1StringWithKey ok");
         next && next.pass();
     } else {
-        console.log("testHMACSHA1StringWithKey ng");
         next && next.miss();
     }
 }
@@ -95,10 +85,8 @@ function testHMACMD5Binary(next) {
         });
 
     if (match) {
-        console.log("testHMACMD5Binary ok");
         next && next.pass();
     } else {
-        console.log("testHMACMD5Binary ng");
         next && next.miss();
     }
 }
@@ -116,10 +104,8 @@ function testHMACSHA1Binary(next) {
         });
 
     if (match) {
-        console.log("testHMACSHA1Binary ok");
         next && next.pass();
     } else {
-        console.log("testHMACSHA1Binary ng");
         next && next.miss();
     }
 }
@@ -131,10 +117,8 @@ function testHMAC_MD5(next) {
     var hash = HMAC.MD5("", "");
 
     if (answer === hash) {
-        console.log("testHMAC_MD5 ok");
         next && next.pass();
     } else {
-        console.log("testHMAC_MD5 ng");
         next && next.miss();
     }
 }
@@ -146,10 +130,8 @@ function testHMAC_SHA1(next) {
     var hash = HMAC.SHA1("", "");
 
     if (answer === hash) {
-        console.log("testHMAC_SHA1 ok");
         next && next.pass();
     } else {
-        console.log("testHMAC_SHA1 ng");
         next && next.miss();
     }
 }
