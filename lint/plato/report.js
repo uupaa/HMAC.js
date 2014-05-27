@@ -8,56 +8,56 @@ __report = {
         "link": "files/lib_HMAC_js/index.html"
       },
       "jshint": {
-        "messages": 1
+        "messages": 13
       },
       "complexity": {
         "aggregate": {
-          "line": 5,
+          "line": 1,
           "complexity": {
             "sloc": {
-              "physical": 120,
-              "logical": 53
+              "physical": 105,
+              "logical": 45
             },
-            "cyclomatic": 11,
+            "cyclomatic": 10,
             "halstead": {
               "operators": {
-                "distinct": 20,
-                "total": 156,
+                "distinct": 16,
+                "total": 141,
                 "identifiers": [
                   "__stripped__"
                 ]
               },
               "operands": {
-                "distinct": 71,
-                "total": 211,
+                "distinct": 60,
+                "total": 218,
                 "identifiers": [
                   "__stripped__"
                 ]
               },
-              "length": 367,
-              "vocabulary": 91,
-              "difficulty": 29.718309859154928,
-              "volume": 2388.3606329529216,
-              "effort": 70978.04134550231,
-              "bugs": 0.7961202109843072,
-              "time": 3943.2245191945726
+              "length": 359,
+              "vocabulary": 76,
+              "difficulty": 29.066666666666666,
+              "volume": 2243.0059773262474,
+              "effort": 65196.707074282924,
+              "bugs": 0.7476686591087491,
+              "time": 3622.039281904607
             },
-            "params": 14
+            "params": 12
           }
         },
         "module": "lib/HMAC.js",
-        "maintainability": 65.5400602590874
+        "maintainability": 65.41929103043896
       }
     }
   ],
   "summary": {
     "total": {
-      "sloc": 120,
-      "maintainability": 65.5400602590874
+      "sloc": 105,
+      "maintainability": 65.41929103043896
     },
     "average": {
-      "sloc": 120,
-      "maintainability": "65.54"
+      "sloc": 105,
+      "maintainability": "65.42"
     }
   }
 }

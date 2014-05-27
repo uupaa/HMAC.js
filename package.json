@@ -1,6 +1,6 @@
 {
   "name":           "uupaa.hmac.js",
-  "version":        "0.8.23",
+  "version":        "0.8.24",
   "description":    "HMAC implement.",
   "url":            "https://github.com/uupaa/HMAC.js",
   "keywords":       ["HMAC", "SHA1", "MD5", "Hash", "util", "uupaa", "WebModule"],
@@ -24,15 +24,17 @@
     "files":        ["lib/HMAC.js"],
     "output":       "release/HMAC.min.js",
     "target":       ["all"],
+    "labels":       ["@dev"],
     "module": {
       "develop":    ["uupaa.valid.js"],
-      "release":    ["uupaa.bytearray.js"]
+      "release":    ["uupaa.datatype.js"]
     }
   },
   "dependencies": {
-    "uupaa.bytearray.js": ""
+    "uupaa.datatype.js": ""
   },
   "devDependencies": {
+    "uupaa.reflection.js": "",
     "uupaa.nodemodule.js": "",
     "uupaa.console.js": "",
     "uupaa.valid.js":   "",
